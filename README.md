@@ -40,6 +40,11 @@ Before you begin, make sure you have the following installed:
    ```
 ### Manually
 
+#### Create a network
+```
+docker network create mynet -d bridge
+```
+
 #### Create a Volume
 ```
 docker volume create mysql-data
