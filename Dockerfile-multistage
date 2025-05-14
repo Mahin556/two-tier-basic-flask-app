@@ -1,5 +1,5 @@
 # ------------------- Stage 1: Build Stage ------------------------------
-FROM python:3.9 AS builder
+FROM python:3.9 AS builder #1.04GB
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # ------------------- Stage 2: Final Stage ------------------------------
-FROM python:3.9-slim
+FROM python:3.9-slim #1.27MBs
 
 WORKDIR /app
 
