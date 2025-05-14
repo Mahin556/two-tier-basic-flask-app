@@ -38,7 +38,7 @@ Before you begin, make sure you have the following installed:
    MYSQL_PASSWORD=your_password
    MYSQL_DB=your_database
    ```
-## Manually
+### Manually
 
 #### Mysql Container
 ```
@@ -56,7 +56,7 @@ docker run -dit -p 5000:5000 --network mynet --name flask-backend-app -e MYSQL_H
 flask-app
 ```
 
-## Usage
+### Compose
 
 1. Start the containers using Docker Compose:
 
