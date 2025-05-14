@@ -40,9 +40,15 @@ Before you begin, make sure you have the following installed:
    ```
 ### Manually
 
+#### Create a Volume
+```
+docker volume create mysql-data
+```
+The volume created in ``/var/lib/docker/volumes/`` directory
+
 #### Mysql Container
 ```
-docker run -d -p 3306:3306 --network mynet --name db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql:9
+docker run -d -p 3306:3306 --network mynet --name db -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql:9
 ```
 
 #### PhpMyAdmin Container
